@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        textarea {
+            width: 500px;
+            height: 400px;
+            resize: none;
+        }
+    </style>
+    <title>Newsletters</title>
+</head>
+<body>
+    <a href="/logout">Logout</a>
+    <form action="" method="POST">
+        <h1>Newsletters</h1>
+        <textarea name="message"></textarea>
+        <br />
+        <button>Send to {{ num_contacts }} contacts</button>
+    </form>
+    <ul>
+        {% for contact in contacts %}
+          <li>{{ contact }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
